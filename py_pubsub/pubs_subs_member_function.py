@@ -22,7 +22,7 @@ class MinimalSubscriber2(Node):
 
     def timer_callback(self):
         msg = String()
-        msg.data = 'hookup again: %d' % self.i
+        msg.data = 'data coming again: %d' % self.i
         self.publisher.publish(msg)
         self.get_logger().info('Publishing: "%s"' % msg.data)
         self.i += 1
